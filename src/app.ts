@@ -21,10 +21,11 @@ app.use(apiContentType)
 app.use('/public', express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.set("view engine",'ejs')
 
 
 app.get('/api',(req,res,nex)=>{
-    res.send("Welcome to the document uploader")
+    res.render("index")
 })
 
 app.use('/api/v1',documentRouter)

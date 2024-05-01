@@ -163,6 +163,19 @@ const deleteDocument = async(req:Request, res:Response, next:NextFunction) =>{
           }
     }
 }
+// signing a document
+const signDocument = async(req:Request, res:Response, next:NextFunction) =>{
+    try {
+        const id = req.params.id
+        
+    } catch (error) {
+        if (error instanceof Error && error.name == 'ValidationError') {
+            next(new BadRequestError('Invalid Request', 400, error))
+          } else {
+            next(error)
+          }
+    }
+}
 export default {
     documentUpload,
     documentUpdate,

@@ -17,4 +17,7 @@ documentRouter.get('/',documentController.getAllDocuments)
 
 // an API that delete a single document
 documentRouter.delete('/document/deleted/:id',documentController.deleteDocument)
+
+// an API that sign a document
+
 export default documentRouter

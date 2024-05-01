@@ -1,11 +1,13 @@
 import {Document,Schema,model} from "mongoose";
 
+// defining the document model
 export type docDocument = Document &{
     documentType: string,
     document_title:string,
     slug:string
 }
 
+// The schema to our database
 export const documentSchema = new Schema({
     documentType:{
         type:String,
